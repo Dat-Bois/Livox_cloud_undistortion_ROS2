@@ -24,6 +24,14 @@ Topics:
 *  ROS2
 *  PCL
 
+Notes: Had to install PCL with:
+sudo apt install ros-humble-pcl-conversions
+sudo apt install libpcl-dev
+
+and tf2 with
+sudo apt install ros-humble-tf2
+sudo apt install tf2-tools
+
 
 ## Build
 In your work space
