@@ -240,11 +240,11 @@ int main(int argc, char * argv[])
   // Subscribe to Pointcloud
   sub_pointcloud   = node->create_subscription<sensor_msgs::msg::PointCloud2>(pointcloud_topic, default_qos, pointcloud_callback);
   // Publisher for the first pointcloud
-  pub_FirstPcl     = node->create_publisher<sensor_msgs::msg::PointCloud2>("/livox_first_point", 100);
+  pub_FirstPcl     = node->create_publisher<sensor_msgs::msg::PointCloud2>("/livox_first_point", 30);
   // Publisher for the final undistorded pointcloud 
-  pub_UndistortPcl = node->create_publisher<sensor_msgs::msg::PointCloud2>("/livox_undistort", 100);
+  pub_UndistortPcl = node->create_publisher<sensor_msgs::msg::PointCloud2>("/livox_undistort", 30);
   // Publisher for the livox frame
-  pub_OriginPcl    = node->create_publisher<sensor_msgs::msg::PointCloud2>("/livox_origin", 100);
+  pub_OriginPcl    = node->create_publisher<sensor_msgs::msg::PointCloud2>("/livox_origin", 30);
 
   // Init Imu process object
   std::shared_ptr<ImuProcess> p_imu(new ImuProcess());
